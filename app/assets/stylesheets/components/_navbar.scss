@@ -1,6 +1,10 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: $black;
+  color: $white;
+    h5 {
+      color: $white;
+    }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +13,36 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.navbar-dashboard {
+  height: 80px;
+  background-color: $grey-dark;
+  width: 100%;
+    h2 {
+      color: $white;
+      margin: auto;
+      line-height: 80px;
+    }
+
+}
+
+.icons-large {
+    i {
+      color: $white;
+      font-size: 36px;
+      padding: 16px;
+      margin: auto;
+
+        &:hover {
+          color: $green-medium;
+        }
+    }
+}
+
+.info-navbar-dashboard {
+  padding-left: 40px {
+
+  }
+
 }
