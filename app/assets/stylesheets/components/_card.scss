@@ -3,7 +3,6 @@
 }
 
 .card-category {
-  height: 200px;
   width: 500px;
   border-radius: 15px;
   border: 1px solid $grey-transparent;
@@ -35,11 +34,33 @@
   width: 600px;
   margin-left: 16px;
   padding: 16px;
+  margin: 20px;
+
+    &:hover {
+        i {
+          color: $grey-dark;
+        }
+    }
 
     p {
       color: $white;
       font-weight: 300;
     }
 
-}
+    i {
+      color: $green-medium;
+      padding-left: 12px;
+      text-decoration: none;
 
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h2 {
+      margin: auto;
+      text-align: center;
+      justify-content: center;
+    }
+}

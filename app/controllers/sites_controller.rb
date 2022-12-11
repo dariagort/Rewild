@@ -41,6 +41,7 @@ class SitesController < ApplicationController
 
   def edit
     @site = Site.find(params[:id])
+    @log = Log.where(id:@log.id)
   end
 
   def update

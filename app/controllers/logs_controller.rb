@@ -15,6 +15,27 @@ class LogsController < ApplicationController
     end
   end
 
+  def edit
+    @log = Log.where(site_id: @site.id, id: log.id)
+  end
+
+  def update
+    @log = Log.find(params[:id])
+    if @log.update(log_params)
+      redirect_to site_path(@site)
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+
+  def destroy
+    @site = Site.find(params[:id])
+    @log = Log.where(site_id: @site.id, id: log.id)
+    @log.destroy
+    redirect_to site_path
+  end
+
   private
 
   def log_params
