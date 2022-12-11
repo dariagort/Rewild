@@ -16,9 +16,11 @@
 }
 
 .navbar-dashboard {
-  height: 80px;
+  height: 140px;
   background-color: $grey-dark;
   width: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
   // text-align: right;
     h2 {
       color: $white;

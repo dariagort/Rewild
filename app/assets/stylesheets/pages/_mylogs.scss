@@ -1,5 +1,10 @@
+.dark-background {
+  background-color: $grey-dark;
+}
+
 .container-timeline {
   padding-top: 80px;
+  overflow-x: none;
 }
 
 .type-text {
@@ -24,4 +29,8 @@
 
 .timeline-grow {
   flex-grow: 1
+}
+
+.no-overflow {
+  overflow-x: none;
 }
