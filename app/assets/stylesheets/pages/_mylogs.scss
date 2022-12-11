@@ -1,0 +1,23 @@
+.container-timeline {
+  padding-top: 80px;
+}
+
+.type-text {
+  margin: auto;
+
+    h3 {
+      margin: 0;
+      padding-right: 14px;
+        a {
+          text-decoration: none;
+          color: $green-medium;
+            &:hover {
+              color: $grey-dark;
+            }
+        }
+    }
+  }
+
+.list-layout {
+  overflow-x: hidden;
+}

@@ -16,6 +16,8 @@ class SitesController < ApplicationController
 
   def show
     @site = Site.find(params[:id])
+    @logs = "no logs"
+    Log.where(site_id: @site.id) ? @logs = Log.where(site_id: @site.id) :  @logs = []
   end
 
   def destroy

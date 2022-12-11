@@ -29,9 +29,17 @@
 }
 
 .card-product {
+  background-color: $green-medium;
+  color: $white;
+  border-radius: 10px;
+  width: 600px;
+  margin-left: 16px;
+  padding: 16px;
+
+    p {
+      color: $white;
+      font-weight: 300;
+    }
 
 }
 
-.card-list {
-
-}
