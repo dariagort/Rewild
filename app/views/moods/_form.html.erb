@@ -1,0 +1,8 @@
+<div class="container-form">
+  <h2>Tag for:&nbsp<%= @site.name %></h2>
+  <%= simple_form_for [@site] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.submit %>
+  <% end %>
+</div>
