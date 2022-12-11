@@ -16,6 +16,7 @@ class LogsController < ApplicationController
   end
 
   def edit
+    @site = Site.find(params[:site_id])
     @log = Log.find(params[:id])
   end
 
