@@ -2,10 +2,13 @@
 <div class="no-overflow">
   <%= render "shared/navbar_dashboard" %>
   <div class="no-overflow">
-    <div >
-      <%= link_to new_site_mood_path(@site), class: "fab-top-right" do %>
-        <i class="fa-solid fa-tags"></i>
-      <% end %>
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-11">
+        <%= link_to new_site_mood_path(@site), class: "fab-top-right" do %>
+          <i class="fa-solid fa-tags"></i>
+        <% end %>
+      </div>
     </div>
     <div class="row" style="padding-top: 100px">
       <div class="col-3 type-text">
