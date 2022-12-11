@@ -12,3 +12,40 @@
   opacity: 1;
 }
 
+
+// FLOATING BUTTONS IN DIFFERENT POSITIONS OF SCREEN
+.fab-top-right {
+  padding-top: 24px;
+  padding-left: 32px;
+  // position: fixed;
+  // z-index: 3000;
+  font-size: 32px;
+  color: $grey-light;
+   &:hover {
+    color: $grey-dark;
+   }
+}
+
+// ----button top right usually used to close or go back---
+// the parrent has position absolute and the children have position relative
+.container-btn {
+  // position: absolute;
+  // width: 100%
+  i {
+    color: $grey-light;
+    text-decoration: none;
+    font-size: 48px;
+    padding-right: 32px;
+    padding-top: 24px;
+      &:hover {
+        color: $grey-dark;
+      }
+  }
+
+}
+
+.btn-top-right {
+  // position: relative;
+  // top: 20;
+  // right: 30px;
+}

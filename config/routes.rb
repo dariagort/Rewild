@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :sites do
     resources :logs
+    resources :moods
   end
-  resources :moods
 end

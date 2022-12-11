@@ -2,6 +2,8 @@
   margin: auto;
 }
 
+// -------CARD CATEGORY---------
+
 .card-category {
   width: 500px;
   border-radius: 15px;
@@ -26,6 +28,9 @@
       justify-content: center;
     }
 }
+
+
+// -----------CARD PRODUCT ------------
 
 .card-product {
   background-color: $green-medium;
@@ -62,5 +67,52 @@
       margin: auto;
       text-align: center;
       justify-content: center;
+    }
+}
+
+// -----------CARD TO LIST (TITLE AND SUBTITLE OR ICON WITH TAG) WITH EDIT & DELETE BUTTONS ON RIGHT----------------
+// its in 3 parts >> it can be imporoved
+.list-line {
+  padding: 16px;
+    i {
+      padding-left: 12px;
+      font-size: 38px;
+    }
+    p {
+      font-size: 20px;
+      color: $grey-dark;
+      margin: auto 0;
+      padding-left: 24px;
+    }
+
+}
+
+.underline-list {
+  border-bottom: 1px solid $grey-transparent;
+    &:hover {
+      a {
+        color: $grey-light;
+          i {
+            padding-left: 16px;
+          }
+      }
+    }
+}
+
+// EDIT AND DELETE BUTTONS ARE INVISILE AND WHEN HOVERING ON THE CARD THEY BECOME VISIBLE
+.mood-crud-btns {
+  color: $grey-dark;
+  padding: 0;
+    a {
+      font-size: 16px;
+      text-decoration: none;
+      color: $white;
+        &:hover {
+          color: $grey-dark;
+        }
+
+        i {
+          padding-left: 16px;
+        }
     }
 }
