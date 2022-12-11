@@ -1,55 +1,56 @@
 
-
-<%= render "shared/navbar_dashboard" %>
-<div>
-  <div class="row" style="padding-top: 100px">
-    <div class="col-3 type-text">
-      <div>
-        <%# this is a div with a right border %>
-        <div style="border-right: 2px solid $white; height: 40px; margin: 5px 0 5px 5px;"></div>
-        <%# this is a div with a date and a round icon a bit positioned to the right (lrelative 7px because) %>
-        <div style="text-align: right; position: relative; left: 7px;">
-          <%= Date.today.to_formatted_s(:log) %> &nbsp&nbsp&nbsp&nbsp&nbsp <i class="fa-solid fa-circle"></i>
+<div class="no-overflow">
+  <%= render "shared/navbar_dashboard" %>
+  <div class="no-overflow">
+    <div class="row" style="padding-top: 100px">
+      <div class="col-3 type-text">
+        <div>
+          <%# this is a div with a right border %>
+          <div style="border-right: 2px solid $white; height: 40px; margin: 5px 0 5px 5px;"></div>
+          <%# this is a div with a date and a round icon a bit positioned to the right (lrelative 7px because) %>
+          <div style="text-align: right; position: relative; left: 7px;">
+            <%= Date.today.to_formatted_s(:log) %> &nbsp&nbsp&nbsp&nbsp&nbsp <i class="fa-solid fa-circle"></i>
+          </div>
+          <%# another div with a right border %>
+          <div style="border-right: 2px solid black; height: 40px; margin: 5px 0 0 5px;"></div>
         </div>
-        <%# another div with a right border %>
-        <div style="border-right: 2px solid black; height: 40px; margin: 5px 0 0 5px;"></div>
+      </div>
+      <div class="col-9 type-text d-flex">
+        <h3>How creative do you feel today?</h3>
+        <h3><%= link_to "Click here to add log", new_site_log_path(@site) %></h3>
       </div>
     </div>
-    <div class="col-9 type-text d-flex">
-      <h3>Would you like to love something new?</h3>
-      <h3><%= link_to "Click here to add log", new_site_log_path(@site) %></h3>
-    </div>
-  </div>
-  <div class="row">
-    <% if @logs != [] %>
-      <% @logs = @logs.order(date: :desc) %>
-      <% @logs.each do |log| %>
-        <div class="col-3 text-type d-flex flex-column">
-          <div class="timeline-grow" style="border-right: 2px solid black; height: 40px; margin:0 5px 0 5px 5px;"></div>
-          <div style="text-align: right; position: relative; left: 7px;">
-            <%= log.date.to_formatted_s(:log) %> &nbsp&nbsp&nbsp&nbsp&nbsp <i class="fa-solid fa-circle"></i>
-          </div>
-          <div class="timeline-grow" style="border-right: 2px solid black; height: 40px; margin: 5px 0 0 5px;"></div>
-        </div>
-        <div class="col-9">
-          <div class="card-product">
-            <div class="d-flex justify-content-between">
-              <h4><%= log.title %></h4>
-              <div class="log-crud-btns pb-2">
-                <%= link_to edit_site_log_path(@site, log.id) do %>
-                  <i class="fa-solid fa-pen"></i>
-                <% end %>
-                <%= link_to site_log_path(@site, log.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-                  <i class="fa-solid fa-trash"></i>
-                <% end %>
-              </div>
-
+    <div class="row">
+      <% if @logs != [] %>
+        <% @logs = @logs.order(date: :desc) %>
+        <% @logs.each do |log| %>
+          <div class="col-3 text-type d-flex flex-column">
+            <div class="timeline-grow" style="border-right: 2px solid black; height: 40px; margin:0 5px 0 5px 5px;"></div>
+            <div style="text-align: right; position: relative; left: 7px;">
+              <%= log.date.to_formatted_s(:log) %> &nbsp&nbsp&nbsp&nbsp&nbsp <i class="fa-solid fa-circle"></i>
             </div>
-            <p><%= log.description %></p>
+            <div class="timeline-grow" style="border-right: 2px solid black; height: 40px; margin: 5px 0 0 5px;"></div>
           </div>
-        </div>
-      <% end %>
-    <% end %>
+          <div class="col-9 no-overflow">
+            <div class="card-product">
+              <div class="d-flex justify-content-between">
+                <h4><%= log.title %></h4>
+                <div class="log-crud-btns pb-2">
+                  <%= link_to edit_site_log_path(@site, log) do %>
+                    <i class="fa-solid fa-pen"></i>
+                  <% end %>
+                  <%= link_to site_log_path(@site, log), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+                    <i class="fa-solid fa-trash"></i>
+                  <% end %>
+                </div>
 
+              </div>
+              <p><%= log.description %></p>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+
+    </div>
   </div>
 </div>
