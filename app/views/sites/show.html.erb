@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="col-9 type-text d-flex">
-        <h3>Would you like to love something new?</h3>
+        <h3>How creative do you feel today?</h3>
         <h3><%= link_to "Click here to add log", new_site_log_path(@site) %></h3>
       </div>
     </div>
@@ -36,10 +36,10 @@
               <div class="d-flex justify-content-between">
                 <h4><%= log.title %></h4>
                 <div class="log-crud-btns pb-2">
-                  <%= link_to edit_site_log_path(@site, log.id) do %>
+                  <%= link_to edit_site_log_path(@site, log) do %>
                     <i class="fa-solid fa-pen"></i>
                   <% end %>
-                  <%= link_to site_log_path(@site, log.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+                  <%= link_to site_log_path(@site, log), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
                     <i class="fa-solid fa-trash"></i>
                   <% end %>
                 </div>

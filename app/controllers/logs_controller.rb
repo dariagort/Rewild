@@ -16,10 +16,11 @@ class LogsController < ApplicationController
   end
 
   def edit
-    @log = Log.where(site_id: @site.id, id: log.id)
+    @log = Log.find(params[:id])
   end
 
   def update
+    @site = Site.find(params[:site_id])
     @log = Log.find(params[:id])
     if @log.update(log_params)
       redirect_to site_path(@site)
@@ -30,10 +31,13 @@ class LogsController < ApplicationController
 
 
   def destroy
-    @site = Site.find(params[:id])
-    @log = Log.where(site_id: @site.id, id: log.id)
-    @log.destroy
-    redirect_to site_path
+    @site = Site.find(params[:site_id])
+    @log = Log.find(params[:id])
+    if @log.delete
+      redirect_to site_path
+    else
+    raise
+    end
   end
 
   private
