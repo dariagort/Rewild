@@ -1,2 +1,34 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div>
+  <div class="row container-home mb-5">
+    <div class="col-2"></div>
+    <div class="col-8 d-flex justify-content-between align-items-center">
+      <div class="card-steps">
+        <h2>Step 1</h2>
+      </div>
+      <div class="card-steps">
+        <h2>Step 2</h2>
+      </div>
+      <div class="card-steps">
+        <h2>Step 3</h2>
+      </div>
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="col-1"></div>
+  <div class="d-flex justify-content-center">
+    <%= link_to "Start gardening", sites_path, class: "btn btn-ghost" %>
+    <%# <a class="btn btn-ghost" href="">Start gardening</a> %>
+  </div>
+
+  <div class="row container-home">
+    <div class="col-2"></div>
+    <div class="card-steps-big col-8 mb-5 ">
+      <h2>The Rewild Community</h2>
+    </div>
+    <div class="col-2"></div>
+  </div>
+   <div class="d-flex justify-content-center pb-5">
+    <a class="btn btn-ghost" href="#">To community</a>
+  </div>
+
+</div>

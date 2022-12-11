@@ -1,0 +1,9 @@
+<div class="container-form">
+  <h2>New log for:&nbsp<%= @site.name %></h2>
+  <%= simple_form_for [@site, @log] do |f| %>
+    <%= f.input :date %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.submit %>
+  <% end %>
+</div>

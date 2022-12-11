@@ -1,1 +1,35 @@
 // Specific CSS for your home-page
+.container-home {
+  margin: auto;
+  padding-top: 80px;
+
+}
+
+.card-steps {
+  height: 200px;
+  width: 300px;
+  border-radius: 15px;
+  border: 1px solid $grey-transparent;
+  margin: 16px;
+  padding: 16px;
+
+    h2 {
+      margin: auto;
+      text-align: center;
+      justify-content: center;
+    }
+}
+
+.card-steps-big {
+  height: 450px;
+  border-radius: 15px;
+  border: 1px solid $grey-transparent;
+  margin: 16px;
+  padding: 16px;
+
+    h2 {
+      margin: auto;
+      text-align: center;
+      justify-content: center;
+    }
+}
