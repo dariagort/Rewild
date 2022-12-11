@@ -4,9 +4,13 @@
   color: $white;
     h5 {
       color: $white;
+      padding-left: 30px;
     }
     a {
-      color: white;
+      color: $grey-light;
+        &:hover {
+          color: $green-medium;
+        }
     }
 
 }
