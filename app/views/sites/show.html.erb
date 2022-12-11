@@ -1,6 +1,8 @@
 
 <div class="no-overflow">
   <%= render "shared/navbar_dashboard" %>
+  <%= link_to  %>
+  <i class="fa-thin fa-tags"></i>
   <div class="no-overflow">
     <div class="row" style="padding-top: 100px">
       <div class="col-3 type-text">
@@ -47,20 +49,6 @@
               </div>
               <p><%= log.description %></p>
             </div>
-            <div id="ex_moon_2" style="text-align:center"><%# the moon for this day %></div>
-            <script>
-            function moon_widget_loaded(moon){
-              html="";
-              var days =[2]
-              for (day in days){
-                i=days[day]
-                html+='<div style="display:inline-block;text-align:center;margin:2px;padding:0px 5px;vertical-align:top">'
-                html+='<div>'+moon.phase[i].svg+'</div>'
-
-              }
-              document.getElementById("ex_moon_2").innerHTML=html
-            }
-            </script>
           </div>
         <% end %>
       <% end %>
@@ -68,5 +56,3 @@
     </div>
   </div>
 </div>
-
-
