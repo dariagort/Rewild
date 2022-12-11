@@ -14,6 +14,7 @@ class SitesController < ApplicationController
     end
   end
 
+  # WHEN I SELECT ONE OF MY SITES I SEE THE ROUTE SITE_PATH (SHOW) WHERE I CAN ALSO SEE ALL THE LOGS OF THE SITE AS WELL
   def show
     @site = Site.find(params[:id])
     @logs = "no logs"
@@ -29,6 +30,8 @@ class SitesController < ApplicationController
   def index
     @sites = current_user.sites
     @all_sites = Site.all
+
+    # THIS CODE IS AN EXAMPLE OF WHAT WE USED IN RYB TO PLOT IN MAP. NOT SURE IF WE WILL USE IT >>>
     # @markers = @all_sites.geocoded.map do |site|
     #   {
     #     lat: site.latitude,
@@ -41,7 +44,6 @@ class SitesController < ApplicationController
 
   def edit
     @site = Site.find(params[:id])
-    @log = Log.where(id:@log.id)
   end
 
   def update

@@ -4,7 +4,15 @@
   color: $white;
     h5 {
       color: $white;
+      padding-left: 30px;
     }
+    a {
+      color: $grey-light;
+        &:hover {
+          color: $green-medium;
+        }
+    }
+
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -14,13 +22,14 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
-
+// ----this is where the info of the site goes (name /weather/ moondphase)----
 .navbar-dashboard {
   height: 140px;
   background-color: $grey-dark;
   width: 100%;
   padding-left: 100px;
   padding-right: 100px;
+  margin-bottom: 34px;
   // text-align: right;
     h2 {
       color: $white;

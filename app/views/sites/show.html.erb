@@ -2,6 +2,14 @@
 <div class="no-overflow">
   <%= render "shared/navbar_dashboard" %>
   <div class="no-overflow">
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-11">
+        <%= link_to new_site_mood_path(@site), class: "fab-top-right" do %>
+          <i class="fa-solid fa-tags"></i>
+        <% end %>
+      </div>
+    </div>
     <div class="row" style="padding-top: 100px">
       <div class="col-3 type-text">
         <div>
@@ -31,7 +39,7 @@
             </div>
             <div class="timeline-grow" style="border-right: 2px solid black; height: 40px; margin: 5px 0 0 5px;"></div>
           </div>
-          <div class="col-9 no-overflow">
+          <div class="col-9 d-flex align-items-center">
             <div class="card-product">
               <div class="d-flex justify-content-between">
                 <h4><%= log.title %></h4>

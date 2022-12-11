@@ -6,9 +6,9 @@
       <div class="col-1"></div>
       <div class="col-5">
         <div class="d-flex justify-content-between mt-5 mb-5">
-          <h2>My sites</h2>
+          <h2>My Gardens</h2>
           <div class="d-flex justify-content-center">
-            <%= link_to "Add site", new_site_path, class: "btn btn-ghost" %>
+            <%= link_to "New Garden", new_site_path, class: "btn btn-ghost" %>
           </div>
         </div>
         <% @sites.each do |site|  %>
@@ -36,7 +36,7 @@
 
   <% else %>
     <div class="d-flex align-items-center justify-content-center no-plants">
-      <h1> Ready to start rewilding? <%= link_to "CLick here to create your first site", new_site_path %>. </h1>
+      <h1> Ready to start rewilding? <%= link_to "Click here to create your first site", new_site_path %>. </h1>
     </div>
   <% end %>
 </div>
