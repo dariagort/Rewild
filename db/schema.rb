@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_11_174758) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_12_001436) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -32,6 +32,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_11_174758) do
     t.string "color"
     t.bigint "site_id", null: false
     t.index ["site_id"], name: "index_moods_on_site_id"
+  end
+
+  create_table "seeds", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.date "date"
+    t.bigint "site_id", null: false
+    t.index ["site_id"], name: "index_seeds_on_site_id"
   end
 
   create_table "sites", force: :cascade do |t|
@@ -62,5 +73,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_11_174758) do
 
   add_foreign_key "logs", "sites"
   add_foreign_key "moods", "sites"
+  add_foreign_key "seeds", "sites"
   add_foreign_key "sites", "users"
 end

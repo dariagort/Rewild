@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   resources :sites do
     resources :logs
     resources :moods
+    resources :seeds
   end
 end
