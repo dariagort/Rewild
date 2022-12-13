@@ -8,29 +8,32 @@
   <div class="container-form pb-5">
     <h2>Cycle history</h2>
     <% @cicles = @cicles.order(start_date: :desc) %>
-    <% @cicles.each do |cicle| %>
+    <% @cicles.each_with_index do |cicle, index| %>
       <div class="d-flex align-items-center justify-content-between underline-list-dates">
-        <div class="d-flex">
+        <div class="d-flex justify-content-between">
           <%# to format how the dates are displayed >>> config/initializers/time_formats %>
           <h6><%= cicle.start_date.to_formatted_s(:cicle_start) %></h6>
           <h6><%= cicle.end_date.to_formatted_s(:cicle_end) %></h6>
-          <% if cicle = @cicles.first %>
+          <%# METHOD TO CALCULATE THE LENGTH OF LAST PERIOD %>
+          <% if cicle == @cicles.last %>
             <% days = 0 %>
           <% else %>
-            <% last_cicle_id = cicle.id - 1  %>
-            <% last_cicle = Cicle.where(id: last_cicle_id) %>
+            <% last_cicle = @cicles[index + 1]  %>
             <% days = cicle.start_date - last_cicle.start_date %>
-            <% days.to_i %>
+            <% days = days.to_i + 1 %>
           <% end %>
-          <p><% days %> days</p>
+          <%# --------------------------------------------- %>
         </div>
-        <div class="mood-crud-btns pb-2">
-          <%= link_to edit_cicle_path(cicle) do %>
-            <i class="fa-solid fa-pen"></i>
-          <% end %>
-          <%= link_to cicle_path(cicle), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-            <i class="fa-solid fa-trash"></i>
-          <% end %>
+        <div class="d-flex justify-content-end">
+          <p><%= days %> days</p>
+          <div class="mood-crud-btns pb-2">
+            <%= link_to edit_cicle_path(cicle) do %>
+              <i class="fa-solid fa-pen"></i>
+            <% end %>
+            <%= link_to cicle_path(cicle), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+              <i class="fa-solid fa-trash"></i>
+            <% end %>
+          </div>
         </div>
       </div>
     <% end %>
