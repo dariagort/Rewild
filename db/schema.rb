@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_13_065642) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_13_181908) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -68,6 +68,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_13_065642) do
     t.index ["user_id"], name: "index_sites_on_user_id"
   end
 
+  create_table "tags", force: :cascade do |t|
+    t.bigint "mood_id", null: false
+    t.bigint "log_id", null: false
+    t.bigint "seed_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["log_id"], name: "index_tags_on_log_id"
+    t.index ["mood_id"], name: "index_tags_on_mood_id"
+    t.index ["seed_id"], name: "index_tags_on_seed_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -85,4 +96,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_13_065642) do
   add_foreign_key "moods", "sites"
   add_foreign_key "seeds", "sites"
   add_foreign_key "sites", "users"
+  add_foreign_key "tags", "logs"
+  add_foreign_key "tags", "moods"
+  add_foreign_key "tags", "seeds"
 end
