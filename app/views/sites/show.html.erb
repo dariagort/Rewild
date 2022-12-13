@@ -57,9 +57,19 @@
                     <i class="fa-solid fa-trash"></i>
                   <% end %>
                 </div>
-
               </div>
+              <% @seeds.each do |seed| %>
+                <% if seed.id == log.seed_id %>
+                  <p>Today my focus is: <%= seed.name %></p>
+                <% end %>
+              <% end %>
               <p><%= log.description %></p>
+              <%# ------here we display the tag icon with the color of the mood-------it should always have a mood but this is a test %>
+              <% @moods.each do |mood| %>
+                <% if mood.id == log.mood_id %>
+                  <i class="fa-solid fa-tag tag-medium" style="color:<%= mood.color.downcase%>"></i>
+                <% end %>
+              <% end %>
             </div>
           </div>
         <% end %>

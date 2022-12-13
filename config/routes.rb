@@ -11,4 +11,5 @@ Rails.application.routes.draw do
     resources :moods
     resources :seeds
   end
+  resources :tags
 end

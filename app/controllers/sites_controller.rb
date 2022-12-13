@@ -19,6 +19,8 @@ class SitesController < ApplicationController
     @site = Site.find(params[:id])
     @logs = "no logs"
     Log.where(site_id: @site.id) ? @logs = Log.where(site_id: @site.id) :  @logs = []
+    Mood.where(site_id: @site.id) ? @moods = Mood.where(site_id: @site.id) : @moods = []
+    Seed.where(site_id: @site.id) ? @seeds = Seed.where(site_id: @site.id) : @seeds = []
   end
 
   def destroy
