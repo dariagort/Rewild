@@ -1,0 +1,26 @@
+<div class="container-btn d-flex justify-content-end align-items-center">
+  <%= link_to site_path(@site) do %>
+    <i class="fas fa-times"></i>
+  <% end %>
+</div>
+<div class="container-form pb-5">
+  <div>
+    <% @seeds.each do |seed| %>
+      <div class="d-flex align-items-center justify-content-between underline-list">
+        <div>
+          <h3><%= seed.name %></h3>
+          <p><%= seed.description %></p>
+        </div>
+        <div class="mood-crud-btns pb-2">
+          <%= link_to edit_site_seed_path(@site, seed) do %>
+            <i class="fa-solid fa-pen"></i>
+          <% end %>
+          <%= link_to site_seed_path(@site, seed), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+            <i class="fa-solid fa-trash"></i>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+</div>
