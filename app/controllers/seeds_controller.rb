@@ -19,6 +19,8 @@ class SeedsController < ApplicationController
   def index
     @site = Site.find(params[:site_id])
     @seeds = Seed.where(site_id: @site.id)
+    # I HAVE TO INCLUDE THIS METHOD "NEW" HERE BECAUSE I HAVE THE FORM IN THE SAME PAGE AAS THE INDEX. IS THERE A BETTER WAY TO DO THIS?
+    @seed = Seed.new()
   end
 
   private

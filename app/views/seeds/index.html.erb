@@ -3,7 +3,7 @@
     <i class="fas fa-times"></i>
   <% end %>
 </div>
-<div class="container-form pb-5">
+<div class="container-form mb-5">
   <div>
     <% @seeds.each do |seed| %>
       <div class="d-flex align-items-center justify-content-between underline-list">
@@ -21,6 +21,6 @@
         </div>
       </div>
     <% end %>
-  </div>
+  <%= render "form" %>
 </div>
 </div>
