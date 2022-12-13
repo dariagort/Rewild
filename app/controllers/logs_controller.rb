@@ -8,10 +8,6 @@ class LogsController < ApplicationController
     @log = Log.new(log_params)
     @site = Site.find(params[:site_id])
     @log.site = @site
-    @mood = Mood.find(params[:mood_id])
-    @log.mood = @mood
-    @seed = Seed.find(params[:mood_id])
-    @log.seed = @seed
     if @log.save
       redirect_to site_path(@site)
     else
