@@ -104,6 +104,12 @@
       padding-top: 24px;
     }
 
+    h6 {
+      font-size: 20px;
+      padding: 24px 16px;
+      margin: 0;
+    }
+
     p {
       padding: 24px 16px;
       margin: 0;
@@ -125,5 +131,32 @@
         i {
           padding-left: 16px;
         }
+    }
+}
+
+// this card is to list cicles with start - end - and length of previous cicle
+.underline-list-dates {
+  border-bottom: 1px solid $grey-transparent;
+  margin: 0;
+    &:hover {
+      a {
+        color: $grey-light;
+          i {
+            padding-left: 16px;
+          }
+      }
+    }
+
+    h6 {
+      font-size: 16px;
+      padding: 24px 16px;
+      margin: 0;
+    }
+
+    p {
+      padding: 24px 16px;
+      color: $grey-light;
+      font-size: 14px;
+      margin: 0;
     }
 }
