@@ -43,6 +43,7 @@
           <div class="col-3 text-type d-flex flex-column">
             <div class="timeline-grow" style="border-right: 2px solid black; height: 40px; margin:0 5px 0 5px 5px;"></div>
             <div style="text-align: right; position: relative; left: 7px;">
+              <%# to format how the dates are displayed >>> config/initializers/time_formats %>
               <%= log.date.to_formatted_s(:log) %> &nbsp&nbsp&nbsp&nbsp&nbsp <i class="fa-solid fa-circle"></i>
             </div>
             <div class="timeline-grow" style="border-right: 2px solid black; height: 40px; margin: 5px 0 0 5px;"></div>

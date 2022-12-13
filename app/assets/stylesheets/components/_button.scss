@@ -23,10 +23,13 @@
   // z-index: 3000;
   font-size: 32px;
   color: $grey-light;
-   &:hover {
-    color: $grey-dark;
-   }
-}
+    p {
+      margin: auto;
+    }
+    &:hover {
+      color: $grey-dark;
+    }
+  }
 
 // ----button top right usually used to close or go back---
 // the parrent has position absolute and the children have position relative

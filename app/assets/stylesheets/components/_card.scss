@@ -90,6 +90,7 @@
 
 .underline-list {
   border-bottom: 1px solid $grey-transparent;
+  margin: 0;
     &:hover {
       a {
         color: $grey-light;
@@ -97,6 +98,11 @@
             padding-left: 16px;
           }
       }
+    }
+
+    p {
+      padding: 24px 16px;
+      margin: 0;
     }
 }
 
