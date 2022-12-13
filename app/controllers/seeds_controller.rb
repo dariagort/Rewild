@@ -23,6 +23,21 @@ class SeedsController < ApplicationController
     @seed = Seed.new()
   end
 
+  def edit
+    @site = Site.find(params[:site_id])
+    @seed = Seed.find(params[:id])
+  end
+
+  def update
+    @site = Site.find(params[:site_id])
+    @seed = Seed.find(params[:id])
+    if @seed.update(seed_params)
+      redirect_to site_seeds_path(@site)
+    else
+      render :new, status: :unprocessable_entity
+    end
+
+  end
   private
   def seed_params
     params.require(:seed).permit(:name, :description, :image_url, :site_id)
