@@ -7,11 +7,11 @@
   <div>
     <% @seeds.each do |seed| %>
       <div class="d-flex align-items-center justify-content-between underline-list">
-        <div class="align-middle">
+        <div>
           <h3><%= seed.name %></h3>
           <p><%= seed.description %></p>
         </div>
-        <div class="mood-crud-btns pb-2 align-items-start">
+        <div class="mood-crud-btns pb-2">
           <%= link_to edit_site_seed_path(@site, seed) do %>
             <i class="fa-solid fa-pen"></i>
           <% end %>
