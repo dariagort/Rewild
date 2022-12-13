@@ -4,6 +4,8 @@
     <%= f.input :date %>
     <%= f.input :title %>
     <%= f.input :description %>
+    <%= f.input :seed_id, :collection => @site.seeds, :include_blank => false %>
+    <%= f.input :mood_id, :collection => @site.moods, :include_blank => false %>
     <%= f.submit %>
   <% end %>
 </div>

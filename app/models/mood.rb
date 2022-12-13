@@ -1,6 +1,5 @@
 class Mood < ApplicationRecord
   belongs_to :site
-  has_many :tags
-  has_many :logs, through: :tags
-  has_many :seeds, through: :tags
+  has_many :logs
+  has_many :seeds, through: :logs
 end
