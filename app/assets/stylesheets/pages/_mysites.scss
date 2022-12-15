@@ -1,3 +1,15 @@
 .background {
   overflow-x: hidden;
 }
+
+.empty {
+  height: 100vh;
+    h3 {
+      font-size: 32px;
+
+      a {
+        color: $green-medium;
+        text-decoration: 0;
+      }
+    }
+}

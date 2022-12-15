@@ -4,12 +4,12 @@
     <%= f.input :name %>
     <%= f.input :address, label: false,  input_html: {class: "d-none"} %>
     <%= f.input :address,
-                      input_html: {data: {address_autocomplete_target: "address"}},
+                      input_html: {data: {address_autocomplete_target: "Current Location"}},
                       wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}} %>
     <%= f.input :description, :label => "Project description", as: :text, input_html: {class: "input-field"} %>
     <%# <%= f.input :project_start_date, :label => "Project starting date" %>
     <%# <%= f.input :project_type, :collection => %w[Regenerative\ agriculture Forest\ garden Rewilding Orchard Other], input_html: {class: "input-field"} %>
-    <%= f.input :project_area, :label => "Project size (sq. meters)", input_html: {class: "input-field"} %>
+    <%# <%= f.input :project_area, :label => "Logbook size", input_html: {class: "input-field"} %>
     <%# <%= f.input :goals, :label => "Project goals", input_html: {class: "input-field"}%>
     <%# <%= f.input :atmospheric_polution, :collection => %w[No\ atmospheric\ polution Low Moderate High] %>
     <%# <%= f.input :soil_type, :collection => %w[Light\ (Sandy) Medium\ (Loam) Heavy Heavy\ Clay Poor\ Soil] %>

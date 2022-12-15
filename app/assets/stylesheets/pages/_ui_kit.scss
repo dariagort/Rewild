@@ -1,0 +1,25 @@
+.container-ui {
+  width: 90%;
+}
+
+.timeline {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+    p {
+      text-align: right;
+      justify-content: right;
+      justify-content: end;
+      margin: 0
+    }
+
+    i {
+      position: relative;
+      left: 7px;
+    }
+}
+
+.grow {
+  // flex-grow: 1;
+}
