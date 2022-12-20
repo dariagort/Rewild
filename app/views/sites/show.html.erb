@@ -92,18 +92,3 @@
   }
 ] %>
 
-
-
-<%= series = [
-  {name: "Total", data: @sites},
-  {name: "Verified", data: @site},
-  {name: "Unverified", data: 6}
-] %>
-
-<%= options = {
-  title: 'Users Growth',
-  subtitle: 'Grouped Per Week',
-  xtitle: 'Week', ytitle: 'Users'
-}%>
-
-<%= line_chart( series,  options) %>
