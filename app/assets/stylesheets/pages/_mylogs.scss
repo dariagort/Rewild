@@ -7,8 +7,19 @@
   overflow-x: none;
 }
 
+.text-dark-mode {
+  p {
+    color: $white;
+    font-weight: 300;
+
+  }
+
+  h3 {
+    color: $white;
+  }
+}
+
 .type-text {
-  margin: auto;
 
     h3 {
       margin: 0;
