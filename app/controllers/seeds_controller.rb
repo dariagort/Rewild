@@ -10,7 +10,7 @@ class SeedsController < ApplicationController
     @seed = Seed.new(seed_params)
     @seed.site_id = @site.id
     if @seed.save
-      redirect_to site_path(@site)
+      redirect_to site_seeds_path(@site)
     else
       render :new, status: :unprocessable_entity
     end
@@ -36,8 +36,15 @@ class SeedsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
-
   end
+
+  def destroy
+    @site = Site.find(params[:site_id])
+    @seed = Seed.find(params[:id])
+    @seed.destroy
+    redirect_to site_seeds_path(@site)
+  end
+
   private
   def seed_params
     params.require(:seed).permit(:name, :description, :image_url, :site_id)
