@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   resources :tags
 
   get "uikit", to: "pages#uikit"
+  get "community", to: "pages#community"
 
 end
