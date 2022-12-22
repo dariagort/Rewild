@@ -6,4 +6,7 @@ class PagesController < ApplicationController
 
   def uikit
   end
+
+  def community
+  end
 end
