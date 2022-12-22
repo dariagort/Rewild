@@ -47,3 +47,13 @@
     </div>
   <% end %>
 </div>
+
+<div class="container-home text-center">
+  <h3>Welcome to your community</h3>
+  <% @all_sites.each do |site| %>
+    <div class="card-category">
+    <%= site.name %>
+    <%# <%= @user(site) %>
+    </div>
+  <% end %>
+</div>
