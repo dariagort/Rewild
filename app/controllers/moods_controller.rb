@@ -11,7 +11,7 @@ class MoodsController < ApplicationController
     @mood = Mood.new(mood_params)
     @mood.site_id = @site.id
     if @mood.save
-      redirect_to site_path(@site)
+      redirect_to new_site_mood_path(@site)
     else
       render :new, status: :unprocessable_entity
     end
@@ -20,6 +20,13 @@ class MoodsController < ApplicationController
   def edit
     @site = Site.find(params[:site_id])
     @mood = Mood.find(params[:id])
+  end
+
+  def destroy
+    @site = Site.find(params[:site_id])
+    @mood = Mood.find(params[:id])
+    @mood.destroy
+    redirect_to new_site_mood_path(@site)
   end
 
   def update
