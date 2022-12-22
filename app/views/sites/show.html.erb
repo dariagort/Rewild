@@ -1,6 +1,5 @@
 <div class="no-overflow">
-  <%= render "shared/navbar_dashboard" %>
-  <div class="no-overflow">
+  <div class="d-flex justify-content-between align-items-center navbar-dashboard">
     <div class="row">
       <div class="col-1"></div>
       <div class="col-11">
@@ -14,21 +13,29 @@
         </div>
       </div>
     </div>
+    <%# THE MOON TODAY %>
+    <div id="contain_moon" style="text-align:center;"><div style="font-weight:bold"></div><div style=""></div><div></div><div style="font-size:small"></div></div><script>(function(){var d=new Date().getDate();var m=document.querySelectorAll("#contain_moon div");var a=new XMLHttpRequest();var url="https://www.icalendar37.net/lunar/api/?lang=en&month="+(new Date().getMonth()+1)+"&year="+(new Date().getFullYear())+"&size=100&lightColor=rgb(245,245,219)&shadeColor=rgb(17,17,17)&t&LDZ="+new Date(new Date().getFullYear(),new Date().getMonth(),1)/1000+"";m[1].style.height="100px";a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){var b=JSON.parse(a.responseText);m[1].innerHTML=b.phase[d].svg;if(typeof moon_widget_loaded=="function")moon_widget_loaded(b)}};a.open("GET",url,true);a.send()})()</script>
+    </div>
+  </div>
+
+  <div class="no-overflow dark-background">
+
     <div class="row" style="padding-top: 100px">
       <div class="col-3 type-text">
         <div>
           <%# this is a div with a right border %>
-          <div style="border-right: 2px solid $white; height: 40px;"></div>
+          <div style="border-right: 2px solid white; weight: 40px;"></div>
           <%# this is a div with a date and a round icon a bit positioned to the right (lrelative 7px because) %>
-          <div style="text-align: right; position: relative; left: 7px;  margin: 5px 0 5px 5p">
-            <%= Date.today.to_formatted_s(:log) %> &nbsp <i class="fa-solid fa-circle"></i>
+          <div class="text-dark-mode d-flex justify-content-end align-items-center timeline">
+            <p><%= Date.today.to_formatted_s(:log) %></p>
+            <i class="fa-solid fa-circle"></i>
           </div>
           <%# another div with a right border %>
-          <div style="border-right: 2px solid black; height: 40px; margin: 5px 0 0 5px;"></div>
+          <div style="border-right: 2px solid white; height: 40px; margin: 5px 0 0 5px;"></div>
         </div>
       </div>
-      <div class="col-9 type-text d-flex">
-        <h3>How creative do you feel today?</h3>
+      <div class="col-9 type-text d-flex align-items-start text-dark-mode pt-0">
+        <h3>Hi <%= @site.name %>! How do you feel today?</h3>
         <h3><%= link_to "Click here to add log", new_site_log_path(@site) %></h3>
       </div>
     </div>
@@ -37,13 +44,13 @@
         <% @logs = @logs.order(date: :desc) %>
         <% @logs.each do |log| %>
           <div class="col-3 d-flex flex-column">
-            <div class="flex-grow-1" style="border-right: 2px solid black; height: 40px; margin: 0px;"></div>
-            <div class="d-flex justify-content-end align-items-center timeline">
+            <div class="flex-grow-1" style="border-right: 2px solid white; height: 40px; margin: 0px;"></div>
+            <div class="d-flex justify-content-end align-items-center timeline text-dark-mode">
               <%# to format how the dates are displayed >>> config/initializers/time_formats %>
               <p><%= log.date.to_formatted_s(:log) %></p>
               <i class="fa-solid fa-circle"></i>
             </div>
-            <div class="flex-grow-1" style="border-right: 2px solid black; height: 40px; margin: 0px;"></div>
+            <div class="flex-grow-1" style="border-right: 2px solid white; height: 40px; margin: 0px;"></div>
           </div>
           <div class="col-9 d-flex">
             <div class="card-product">
@@ -78,4 +85,3 @@
     </div>
   </div>
 </div>
-
