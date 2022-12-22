@@ -25,14 +25,15 @@ class SitesController < ApplicationController
 
   def destroy
     @site = Site.find(params[:id])
-    @site.destroy
     @user = User.where(id: @site.user_id)
+    @site.destroy
     redirect_to sites_path
   end
 
   def index
     @sites = current_user.sites
     @all_sites = Site.all
+    @all_users = User.all
 
     # THIS CODE IS AN EXAMPLE OF WHAT WE USED IN RYB TO PLOT IN MAP. NOT SURE IF WE WILL USE IT >>>
     # @markers = @all_sites.geocoded.map do |site|
