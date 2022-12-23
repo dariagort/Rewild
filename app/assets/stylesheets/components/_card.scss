@@ -31,11 +31,12 @@
 }
 
 
-// -----------CARD PRODUCT ------------
+// -----------CARD PRODUCT - used for logs------------
 
 .card-product {
-  background-color: $green-medium;
+  background-color: #2a284d;
   color: $white;
+  font-family: $headers-font;
   border-radius: 10px;
   width: 600px;
   margin-left: 16px;
@@ -44,7 +45,7 @@
 
     &:hover {
         i {
-          color: $grey-dark;
+          color: $white;
         }
     }
 
@@ -54,7 +55,7 @@
     }
 
     i {
-      color: $green-medium;
+      color: #2a284d;
       padding-left: 12px;
       text-decoration: none;
 

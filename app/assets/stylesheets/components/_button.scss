@@ -22,12 +22,13 @@
   // position: fixed;
   // z-index: 3000;
   font-size: 32px;
-  color: $white;
+  color: rgb(80, 240, 49);
+  opacity: 0.3;
     p {
       margin: auto;
     }
     &:hover {
-      color: $grey-dark;
+      opacity: 1;
     }
   }
 
