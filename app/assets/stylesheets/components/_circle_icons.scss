@@ -5,7 +5,7 @@
   --s: calc(2*var(--r) + var(--d)); /* container size */
   position: relative;
   width: var(--s); height: var(--s);
-  background: silver /* to show images perfectly fit in container */
+  background: none /* put color to show images perfectly fit in container */
 }
 
 .container-c a {
@@ -21,3 +21,19 @@
 }
 
 img { max-width: 100% }
+
+
+.icon-circle {
+  color: $grey-dark;
+  text-decoration: none;
+    &:hover {
+      color: $white;
+    }
+
+    i {
+        &:hover {
+          color: $white;
+        }
+    }
+
+}

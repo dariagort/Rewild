@@ -5,29 +5,49 @@
     <div class="row">
       <div class="col-1"></div>
       <div class="col-10">
-        <div class="d-flex justify-content-center align-items-center mt-5 mb-5">
-            <div class="">
-              <%= link_to "New Logbook", new_site_path, class: "btn btn-ghost" %>
-            </div>
-        </div>
-        <% @sites.each do |site|  %>
-          <%= link_to site_path(site) do %>
-            <div class="">
-              <div class="d-flex justify-content-between card-category">
-                <h4><%= site.name %></h4>
-                <div class="log-crud-btns pb-2">
-                  <%= link_to edit_site_path(site) do %>
-                    <i class="fa-solid fa-pen"></i>
-                  <% end %>
-                  <%= link_to site_path(site), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-                    <i class="fa-solid fa-trash"></i>
-                  <% end %>
+          <%# code to place all the tags of a month in a circle %>
+        <% days_month = (1..31) %>
+        <div class="d-flex justify-content-center mt-5">
+          <div class="container-c" style="--m: <%= days_month.last %>; --tan: 0.41">
+            <% @sites.each do |site|  %>
+              <%= link_to site_path(site)  do %>
+                <div>
+                  <p>Start loging your moods to find your pattern</p>
                 </div>
-              </div>
-              <p><%= site.address %></p>
-            </div>
-          <% end %>
-        <% end %>
+              <% end %>
+            <% end %>
+            <% days_month.each do |day| %>
+              <a class="d-flex align-items-center justify-content-center icon-circle" style="--i: <%= day %>">
+                <i class="fa-solid fa-circle" style=""></i>
+              </a>
+            <% end %>
+          </div>
+        </div>
+        <%# ----------------------------------------------- %>
+        <%# <div class="d-flex justify-content-center align-items-center mt-5 mb-5"> %>
+            <%# IF WE NEED TO ADD A NEW LOG WE CAN ADD IT WITH THIS BUTTON %>
+            <%# <div class="">
+              <%= link_to "New Logbook", new_site_path, class: "btn btn-ghost" %>
+            <%# </div> %>
+        <%# </div> %>
+        <%# <% @sites.each do |site|  %>
+          <%# <%= link_to site_path(site) do %>
+            <%# <div class=""> %>
+              <%# <div class="d-flex justify-content-between card-category"> %>
+                <%# <h4><%= site.name</h4> %>
+                <%# <div class="log-crud-btns pb-2"> %>
+                  <%# <%= link_to edit_site_path(site) do %>
+                    <%# <i class="fa-solid fa-pen"></i> %>
+                  <%# <% end %>
+                  <%# <%= link_to site_path(site), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+                    <%# <i class="fa-solid fa-trash"></i> %>
+                  <%# <% end %>
+                <%# </div> %>
+              <%# </div> %>
+              <%# <p><%= site.address</p> %>
+            <%# </div> %>
+          <%# <% end %>
+        <%# <% end %>
       </div>
       <div class="col-1"></div>
     </div>
