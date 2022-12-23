@@ -27,13 +27,28 @@ img { max-width: 100% }
   color: $grey-dark;
   text-decoration: none;
     &:hover {
-      color: $white;
+      color: red;
     }
 
     i {
         &:hover {
-          color: $white;
+          color: red;
         }
+    }
+
+}
+
+.btn-center-circle {
+  text-align: center;
+  color: $grey-dark;
+  text-decoration: none;
+
+
+  p {
+    font-size: 24px;
+    &:hover {
+      color: red;
+    }
     }
 
 }

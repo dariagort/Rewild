@@ -10,10 +10,8 @@
         <div class="d-flex justify-content-center mt-5">
           <div class="container-c" style="--m: <%= days_month.last %>; --tan: 0.41">
             <% @sites.each do |site|  %>
-              <%= link_to site_path(site)  do %>
-                <div>
-                  <p>Start loging your moods to find your pattern</p>
-                </div>
+              <%= link_to site_path(site), class: "btn-center-circle" do %>
+                <p>Start to log! You might find a pattern soon!</p>
               <% end %>
             <% end %>
             <% days_month.each do |day| %>
@@ -61,7 +59,7 @@
 
 <div class="container-home text-center">
   <div class="mb-5">
-    <h3>Welcome to your community</h3>
+    <h4>Soon you will compare your patterns with:</h4>
   </div>
   <div class="mb-3">
     <% @all_sites.each do |site| %>
