@@ -1,6 +1,20 @@
 .dark-background {
-  background-color: $grey-dark;
+  // background-color: $grey-dark;
+  // background: rgb(48,47,68);
+  background: linear-gradient(0deg, rgba(48,47,68,1) 0%, rgba(42,40,77,1) 35%, rgba(62,57,56,1) 100%);
 }
+
+.fixed-moon {
+  position: fixed;
+  right: 7%;
+}
+
+.fixed-icons-bottom {
+  position: fixed;
+  right: 7%;
+  bottom: 2%;
+}
+
 
 .container-timeline {
   padding-top: 80px;
@@ -20,13 +34,14 @@
 }
 
 .type-text {
+  padding-left: 30px;
 
     h3 {
       margin: 0;
       padding-right: 14px;
         a {
           text-decoration: none;
-          color: $green-medium;
+          color: $white;
             &:hover {
               color: $grey-dark;
             }
