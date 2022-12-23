@@ -21,16 +21,30 @@
   // padding-left: 32px;
   // position: fixed;
   // z-index: 3000;
-  font-size: 32px;
-  color: rgb(80, 240, 49);
-  opacity: 0.3;
+  font-size: 40px;
+  color: $green-medium;
+  opacity: 0.6;
     p {
       margin: auto;
     }
     &:hover {
-      opacity: 1;
+      color: $white;
     }
   }
+
+.fab-top-right-red {
+  color: red;
+  padding-top: 24px;
+  padding-right: 16px;
+  text-decoration: none;
+  // padding-left: 32px;
+  // position: fixed;
+  // z-index: 3000;
+  font-size: 40px;
+    &:hover {
+      color: $white;
+    }
+}
 
 // ----button top right usually used to close or go back---
 // the parrent has position absolute and the children have position relative

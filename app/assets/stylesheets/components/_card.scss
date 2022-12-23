@@ -2,15 +2,16 @@
   margin: auto;
 }
 
-// -------CARD CATEGORY---------
+// -------CARD CATEGORY used for logbooks---------
 
 .card-category {
-  width: 500px;
+  width: 300px;
   border-radius: 15px;
   border: 1px solid $grey-transparent;
   margin: auto;
   padding: 16px;
   margin-bottom: 20px;
+
 
     i {
       color: $grey-dark;
@@ -23,12 +24,15 @@
       color: $grey-dark;
     }
 
-    h2 {
+    h4{
       margin: auto;
       text-align: center;
       justify-content: center;
+      font-weight: 600;
     }
+
 }
+
 
 
 // -----------CARD PRODUCT - used for logs------------
@@ -38,7 +42,7 @@
   color: $white;
   font-family: $headers-font;
   border-radius: 10px;
-  width: 600px;
+  width: 500px;
   margin-left: 16px;
   padding: 16px;
   margin: 20px;
