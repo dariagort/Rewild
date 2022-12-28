@@ -16,20 +16,17 @@
             <% end %>
             <% @logs = @logs.reverse %>
             <% @logs.take(30).each_with_index do |log, i| %>
-              <a href="#" class="d-flex align-items-center justify-content-center icon-circle" style="--i: <%= i %>" data-toggle="tooltip"  title="Some tooltip text!">
+              <% now = Date.today %>
+              <% before = log.date %>
+              <p><%= difference_in_days = (now - before).to_i %></p>
+              <p><%= (difference_in_days/365.25).to_i  %></p>
+              <a href="#" class="d-flex align-items-center justify-content-center icon-circle" style="--i: <%= i %>" data-toggle="tooltip"  title="<%= difference_in_days = (now - before).to_i %> days ago">
                 <% @moods.each do |mood| %>
                   <% if mood.id == log.mood_id %>
                     <i class="fa-solid fa-circle" style="color:<%= mood.color.downcase%>"></i>
                   <% end %>
                 <% end %>
               </a>
-              <!-- Generated markup by the plugin -->
-              <div class="tooltip bs-tooltip-top" role="tooltip">
-                <div class="arrow"></div>
-                <div class="tooltip-inner">
-                  Some tooltip text!
-                </div>
-              </div>
             <% end %>
           </div>
         </div>
