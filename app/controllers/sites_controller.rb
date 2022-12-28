@@ -34,6 +34,8 @@ class SitesController < ApplicationController
     @sites = current_user.sites
     @all_sites = Site.all
     @all_users = User.all
+    @logs = @sites.last.logs
+    @moods = @sites.last.moods
 
     # THIS CODE IS AN EXAMPLE OF WHAT WE USED IN RYB TO PLOT IN MAP. NOT SURE IF WE WILL USE IT >>>
     # @markers = @all_sites.geocoded.map do |site|

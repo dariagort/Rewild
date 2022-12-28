@@ -14,13 +14,26 @@
                 <p>Start to log! You might find a pattern soon!</p>
               <% end %>
             <% end %>
-            <% days_month.each do |day| %>
-              <a class="d-flex align-items-center justify-content-center icon-circle" style="--i: <%= day %>">
-                <i class="fa-solid fa-circle" style=""></i>
+            <% @logs = @logs.reverse %>
+            <% @logs.take(30).each_with_index do |log, i| %>
+              <a href="#" class="d-flex align-items-center justify-content-center icon-circle" style="--i: <%= i %>" data-toggle="tooltip"  title="Some tooltip text!">
+                <% @moods.each do |mood| %>
+                  <% if mood.id == log.mood_id %>
+                    <i class="fa-solid fa-circle" style="color:<%= mood.color.downcase%>"></i>
+                  <% end %>
+                <% end %>
               </a>
+              <!-- Generated markup by the plugin -->
+              <div class="tooltip bs-tooltip-top" role="tooltip">
+                <div class="arrow"></div>
+                <div class="tooltip-inner">
+                  Some tooltip text!
+                </div>
+              </div>
             <% end %>
           </div>
         </div>
+
         <%# ----------------------------------------------- %>
         <%# <div class="d-flex justify-content-center align-items-center mt-5 mb-5"> %>
             <%# IF WE NEED TO ADD A NEW LOG WE CAN ADD IT WITH THIS BUTTON %>
