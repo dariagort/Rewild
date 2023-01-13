@@ -73,66 +73,119 @@
   // margin: -2em;
 }
 
+.translate-8 {
+  transform: translate(8em);
+}
+.translate-10 {
+  transform: translate(10em);
+}
+.translate-12 {
+  transform: translate(12em);
+}
+
 // 3 CICLES WEEK ONE
 
-.deg1 { transform: rotate(12.86deg - 90deg) translate(12em); }
-.deg2 { transform: rotate(25.72deg - 90deg) translate(12em); }
-.deg3 { transform: rotate(38.6deg - 90deg) translate(12em); }
-.deg4 { transform: rotate(51.43deg - 90deg) translate(12em); }
-.deg5 { transform: rotate(64.29deg - 90deg) translate(12em); }
-.deg6 { transform: rotate(77.14deg - 90deg) translate(12em); }
-.deg7 { transform: rotate(90deg - 90deg) translate(12em); }
+.deg1-1 { transform: rotate(12.86deg - 90deg) translate(12em); }
+.deg2-1 { transform: rotate(25.72deg - 90deg) translate(12em); }
+.deg3-1 { transform: rotate(38.6deg - 90deg) translate(12em); }
+.deg4-1 { transform: rotate(51.43deg - 90deg) translate(12em); }
+.deg5-1 { transform: rotate(64.29deg - 90deg) translate(12em); }
+.deg6-1 { transform: rotate(77.14deg - 90deg) translate(12em); }
+.deg7-1 { transform: rotate(90deg - 90deg) translate(12em); }
+
+.deg1-2 { transform: rotate(12.86deg - 90deg) translate(10em); }
+.deg2-2 { transform: rotate(25.72deg - 90deg); }
+.deg3-2 { transform: rotate(38.6deg - 90deg) translate(10em); }
+.deg4-2 { transform: rotate(51.43deg - 90deg) translate(10em); }
+.deg5-2 { transform: rotate(64.29deg - 90deg) translate(10em); }
+.deg6-2 { transform: rotate(77.14deg - 90deg) translate(10em); }
+.deg7-2 { transform: rotate(90deg - 90deg) translate(10em); }
+
+.deg1-3 { transform: rotate(12.86deg - 90deg) translate(8em); }
+.deg2-3 { transform: rotate(25.72deg - 90deg) translate(8em); }
+.deg3-3 { transform: rotate(38.6deg - 90deg) translate(8em); }
+.deg4-3 { transform: rotate(51.43deg - 90deg) translate(8em); }
+.deg5-3 { transform: rotate(64.29deg - 90deg) translate(8em); }
+.deg6-3 { transform: rotate(77.14deg - 90deg) translate(8em); }
+.deg7-3 { transform: rotate(90deg - 90deg) translate(8em); }
 
 
 // 3 CIRCLES  WEEK TWO
-.deg28 { transform: translate(12em); } /* 12em = half the width of the wrapper */
-.deg8 { transform: rotate(12.86deg) translate(12em); }
-.deg9 { transform: rotate(25.72deg) translate(12em); }
-.deg10 { transform: rotate(38.6deg) translate(12em); }
-.deg11 { transform: rotate(51.43deg) translate(12em); }
-.deg12 { transform: rotate(64.29deg) translate(12em); }
-.deg13 { transform: rotate(77.14deg) translate(12em); }
-.deg14 { transform: rotate(90deg) translate(12em); }
+.deg8-1 { transform: rotate(12.86deg) translate(12em); }
+.deg9-1 { transform: rotate(25.72deg) translate(12em); }
+.deg10-1 { transform: rotate(38.6deg) translate(12em); }
+.deg11-1 { transform: rotate(51.43deg) translate(12em); }
+.deg12-1 { transform: rotate(64.29deg) translate(12em); }
+.deg13-1 { transform: rotate(77.14deg) translate(12em); }
+.deg14-1 { transform: rotate(90deg) translate(12em); }
 
-.deg1-2 { transform: rotate(12.86deg) translate(10em); }
-.deg2-2 { transform: rotate(25.72deg) translate(10em); }
-.deg3-2 { transform: rotate(38.6deg) translate(10em); }
-.deg4-2 { transform: rotate(51.43deg) translate(10em); }
-.deg5-2 { transform: rotate(64.29deg) translate(10em); }
-.deg6-2 { transform: rotate(77.14deg) translate(10em); }
-.deg7-2 { transform: rotate(90deg) translate(10em); }
+.deg8-2 { transform: rotate(12.86deg) translate(10em); }
+.deg9-2 { transform: rotate(25.72deg) translate(10em); }
+.deg10-2 { transform: rotate(38.6deg) translate(10em); }
+.deg11-2 { transform: rotate(51.43deg) translate(10em); }
+.deg12-2 { transform: rotate(64.29deg) translate(10em); }
+.deg13-2 { transform: rotate(77.14deg) translate(10em); }
+.deg14-2 { transform: rotate(90deg) translate(10em); }
 
-.deg1-3 { transform: rotate(12.86deg) translate(8em); }
-.deg2-3 { transform: rotate(25.72deg) translate(8em); }
-.deg3-3 { transform: rotate(38.6deg) translate(8em); }
-.deg4-3 { transform: rotate(51.43deg) translate(8em); }
-.deg5-3 { transform: rotate(64.29deg) translate(8em); }
-.deg6-3 { transform: rotate(77.14deg) translate(8em); }
-.deg7-3 { transform: rotate(90deg) translate(8em); }
+.deg8-3 { transform: rotate(12.86deg) translate(8em); }
+.deg9-3 { transform: rotate(25.72deg) translate(8em); }
+.deg10-3 { transform: rotate(38.6deg) translate(8em); }
+.deg11-3 { transform: rotate(51.43deg) translate(8em); }
+.deg12-3 { transform: rotate(64.29deg) translate(8em); }
+.deg13-3 { transform: rotate(77.14deg) translate(8em); }
+.deg14-3 { transform: rotate(90deg) translate(8em); }
 
 // 3 CICLES WEEK THREE
 
-.deg15 { transform: rotate(12.86deg + 90deg) translate(12em); }
-.deg16 { transform: rotate(25.72deg + 90deg) translate(12em); }
-.deg17 { transform: rotate(38.6deg + 90deg) translate(12em); }
-.deg18 { transform: rotate(51.43deg + 90deg) translate(12em); }
-.deg19 { transform: rotate(64.29deg + 90deg) translate(12em); }
-.deg20 { transform: rotate(77.14deg + 90deg) translate(12em); }
-.deg21 { transform: rotate(90deg + 90deg) translate(12em); }
+.deg15-1 { transform: rotate(12.86deg + 90deg) translate(12em); }
+.deg16-1 { transform: rotate(25.72deg + 90deg) translate(12em); }
+.deg17-1 { transform: rotate(38.6deg + 90deg) translate(12em); }
+.deg18-1 { transform: rotate(51.43deg + 90deg) translate(12em); }
+.deg19-1 { transform: rotate(64.29deg + 90deg) translate(12em); }
+.deg20-1 { transform: rotate(77.14deg + 90deg) translate(12em); }
+.deg21-1 { transform: rotate(90deg + 90deg) translate(12em); }
 
+.deg15-2 { transform: rotate(12.86deg + 90deg) translate(10em); }
+.deg16-2 { transform: rotate(25.72deg + 90deg) translate(10em); }
+.deg17-2 { transform: rotate(38.6deg + 90deg) translate(10em); }
+.deg18-2 { transform: rotate(51.43deg + 90deg) translate(10em); }
+.deg19-2 { transform: rotate(64.29deg + 90deg) translate(10em); }
+.deg20-2 { transform: rotate(77.14deg + 90deg) translate(10em); }
+.deg21-2 { transform: rotate(90deg + 90deg) translate(10em); }
 
+.deg15-3 { transform: rotate(12.86deg + 90deg) translate(8em); }
+.deg16-3 { transform: rotate(25.72deg + 90deg) translate(8em); }
+.deg17-3 { transform: rotate(38.6deg + 90deg) translate(8em); }
+.deg18-3 { transform: rotate(51.43deg + 90deg) translate(8em); }
+.deg19-3 { transform: rotate(64.29deg + 90deg) translate(8em); }
+.deg20-3 { transform: rotate(77.14deg + 90deg) translate(8em); }
+.deg21-3 { transform: rotate(90deg + 90deg) translate(8em); }
 
 // 3 CICLES WEEK 4
 
-.deg22 { transform: rotate(12.86deg + 180deg) translate(12em); }
-.deg23 { transform: rotate(25.72deg + 180deg) translate(12em); }
-.deg24 { transform: rotate(38.6deg + 180deg) translate(12em); }
-.deg25 { transform: rotate(51.43deg + 180deg) translate(12em); }
-.deg26 { transform: rotate(64.29deg + 180deg) translate(12em); }
-.deg27 { transform: rotate(77.14deg + 180deg) translate(12em); }
-.deg28 { transform: rotate(90deg + 180deg) translate(12em); }
+.deg22-1 { transform: rotate(12.86deg + 180deg) translate(12em); }
+.deg23-1 { transform: rotate(25.72deg + 180deg) translate(12em); }
+.deg24-1 { transform: rotate(38.6deg + 180deg) translate(12em); }
+.deg25-1 { transform: rotate(51.43deg + 180deg) translate(12em); }
+.deg26-1 { transform: rotate(64.29deg + 180deg) translate(12em); }
+.deg27-1 { transform: rotate(77.14deg + 180deg) translate(12em); }
+.deg28-1 { transform: rotate(90deg + 180deg) translate(12em); }
 
+.deg22-2 { transform: rotate(12.86deg + 180deg) translate(10em); }
+.deg23-2 { transform: rotate(25.72deg + 180deg) translate(10em); }
+.deg24-2 { transform: rotate(38.6deg + 180deg) translate(10em); }
+.deg25-2 { transform: rotate(51.43deg + 180deg) translate(10em); }
+.deg26-2 { transform: rotate(64.29deg + 180deg) translate(10em); }
+.deg27-2 { transform: rotate(77.14deg + 180deg) translate(10em); }
+.deg28-2 { transform: rotate(90deg + 180deg) translate(10em); }
 
+.deg22-3 { transform: rotate(12.86deg + 180deg) translate(8em); }
+.deg23-3 { transform: rotate(25.72deg + 180deg) translate(8em); }
+.deg24-3 { transform: rotate(38.6deg + 180deg) translate(8em); }
+.deg25-3 { transform: rotate(51.43deg + 180deg) translate(8em); }
+.deg26-3 { transform: rotate(64.29deg + 180deg) translate(8em); }
+.deg27-3 { transform: rotate(77.14deg + 180deg) translate(8em); }
+.deg28-3 { transform: rotate(90deg + 180deg) translate(8em); }
 
 
 // ------------
