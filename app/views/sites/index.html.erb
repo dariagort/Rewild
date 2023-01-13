@@ -55,6 +55,10 @@
           <%# <% end %>
           <%# <% end %>
 
+         <%# THE MOON TODAY %>
+        <div class="d-flex justify-content-center" id="contain_moon" style="text-align:center;"><div style="font-weight:bold"></div><div style=""></div><div></div><div style="font-size:small"></div></div><script>(function(){var d=new Date().getDate();var m=document.querySelectorAll("#contain_moon div");var a=new XMLHttpRequest();var url="https://www.icalendar37.net/lunar/api/?lang=en&month="+(new Date().getMonth()+1)+"&year="+(new Date().getFullYear())+"&size=100&lightColor=rgb(245,245,219)&shadeColor=rgb(17,17,17)&t&LDZ="+new Date(new Date().getFullYear(),new Date().getMonth(),1)/1000+"";m[1].style.height="100px";a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){var b=JSON.parse(a.responseText);m[1].innerHTML=b.phase[d].svg;if(typeof moon_widget_loaded=="function")moon_widget_loaded(b)}};a.open("GET",url,true);a.send()})()</script>
+        </div>
+
         <div class='circle-container d-flex justify-content-center align-items-center'>
           <%# <a href='#' class='center'><i class="fa-solid fa-circle" style="color:"></i></a> %>
           <a href='#' class='deg1-1'><i class="fa-solid fa-circle" style="color:"></i></a>
@@ -74,6 +78,7 @@
           <a href='#' class='deg14-1'><i class="fa-solid fa-circle" style="color:"></i></a>
 
           <a href='#' class='deg15-1'><i class="fa-solid fa-circle" style="color:"></i></a>
+          <a href='#' class='deg16-1'><i class="fa-solid fa-circle" style="color:"></i></a>
           <a href='#' class='deg17-1'><i class="fa-solid fa-circle" style="color:"></i></a>
           <a href='#' class='deg17-1'><i class="fa-solid fa-circle" style="color:"></i></a>
           <a href='#' class='deg18-1'><i class="fa-solid fa-circle" style="color:"></i></a>
@@ -108,7 +113,7 @@
             <a href='#' class='deg14-2'><i class="fa-solid fa-circle" style="color:"></i></a>
 
             <a href='#' class='deg15-2'><i class="fa-solid fa-circle" style="color:"></i></a>
-            <a href='#' class='deg17-2'><i class="fa-solid fa-circle" style="color:"></i></a>
+            <a href='#' class='deg16-2'><i class="fa-solid fa-circle" style="color:"></i></a>
             <a href='#' class='deg17-2'><i class="fa-solid fa-circle" style="color:"></i></a>
             <a href='#' class='deg18-2'><i class="fa-solid fa-circle" style="color:"></i></a>
             <a href='#' class='deg19-2'><i class="fa-solid fa-circle" style="color:"></i></a>
@@ -143,7 +148,7 @@
               <a href='#' class='deg14-3'><i class="fa-solid fa-circle" style="color:"></i></a>
 
               <a href='#' class='deg15-3'><i class="fa-solid fa-circle" style="color:"></i></a>
-              <a href='#' class='deg17-3'><i class="fa-solid fa-circle" style="color:"></i></a>
+              <a href='#' class='deg16-3'><i class="fa-solid fa-circle" style="color:"></i></a>
               <a href='#' class='deg17-3'><i class="fa-solid fa-circle" style="color:"></i></a>
               <a href='#' class='deg18-3'><i class="fa-solid fa-circle" style="color:"></i></a>
               <a href='#' class='deg19-3'><i class="fa-solid fa-circle" style="color:"></i></a>
