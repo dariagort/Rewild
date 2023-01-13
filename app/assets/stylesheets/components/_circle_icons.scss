@@ -29,11 +29,14 @@
   position: relative;
   width: 24em;
   height: 24em;
-  padding: 2.8em;
+  // padding: 2.8em;
   /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
   border: dashed 1px;
   border-radius: 50%;
   margin: 1.75em auto 0;
+
+    img { display: block; width: 100%; }
+
 }
 
 .circle-container-two {
@@ -44,6 +47,8 @@
   /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
   border: dashed 1px;
   border-radius: 50%;
+
+  img { display: block; width: 100%; }
 }
 
 .circle-container-three {
@@ -54,6 +59,8 @@
   /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
   border: dashed 1px;
   border-radius: 50%;
+
+  img { display: block; width: 100%; }
 }
 
 
@@ -61,17 +68,69 @@
 .circle-container a {
   display: block;
   position: absolute;
-  top: 50%; left: 50%;
-  width: 4em; height: 4em;
-  margin: -2em;
+  // top: 50%; left: 50%;
+  width: 1em; height: 1em;
+  // margin: -2em;
 }
-.circle-container img { display: block; width: 100%; }
-.deg0 { transform: translate(12em); } /* 12em = half the width of the wrapper */
-.deg45 { transform: rotate(45deg) translate(12em) rotate(-45deg); }
-.deg135 { transform: rotate(135deg) translate(12em) rotate(-135deg); }
-.deg180 { transform: translate(-12em); }
-.deg225 { transform: rotate(225deg) translate(12em) rotate(-225deg); }
-.deg315 { transform: rotate(315deg) translate(12em) rotate(-315deg); }
+
+// 3 CICLES WEEK ONE
+
+.deg1 { transform: rotate(12.86deg - 90deg) translate(12em); }
+.deg2 { transform: rotate(25.72deg - 90deg) translate(12em); }
+.deg3 { transform: rotate(38.6deg - 90deg) translate(12em); }
+.deg4 { transform: rotate(51.43deg - 90deg) translate(12em); }
+.deg5 { transform: rotate(64.29deg - 90deg) translate(12em); }
+.deg6 { transform: rotate(77.14deg - 90deg) translate(12em); }
+.deg7 { transform: rotate(90deg - 90deg) translate(12em); }
+
+
+// 3 CIRCLES  WEEK TWO
+.deg28 { transform: translate(12em); } /* 12em = half the width of the wrapper */
+.deg8 { transform: rotate(12.86deg) translate(12em); }
+.deg9 { transform: rotate(25.72deg) translate(12em); }
+.deg10 { transform: rotate(38.6deg) translate(12em); }
+.deg11 { transform: rotate(51.43deg) translate(12em); }
+.deg12 { transform: rotate(64.29deg) translate(12em); }
+.deg13 { transform: rotate(77.14deg) translate(12em); }
+.deg14 { transform: rotate(90deg) translate(12em); }
+
+.deg1-2 { transform: rotate(12.86deg) translate(10em); }
+.deg2-2 { transform: rotate(25.72deg) translate(10em); }
+.deg3-2 { transform: rotate(38.6deg) translate(10em); }
+.deg4-2 { transform: rotate(51.43deg) translate(10em); }
+.deg5-2 { transform: rotate(64.29deg) translate(10em); }
+.deg6-2 { transform: rotate(77.14deg) translate(10em); }
+.deg7-2 { transform: rotate(90deg) translate(10em); }
+
+.deg1-3 { transform: rotate(12.86deg) translate(8em); }
+.deg2-3 { transform: rotate(25.72deg) translate(8em); }
+.deg3-3 { transform: rotate(38.6deg) translate(8em); }
+.deg4-3 { transform: rotate(51.43deg) translate(8em); }
+.deg5-3 { transform: rotate(64.29deg) translate(8em); }
+.deg6-3 { transform: rotate(77.14deg) translate(8em); }
+.deg7-3 { transform: rotate(90deg) translate(8em); }
+
+// 3 CICLES WEEK THREE
+
+.deg15 { transform: rotate(12.86deg + 90deg) translate(12em); }
+.deg16 { transform: rotate(25.72deg + 90deg) translate(12em); }
+.deg17 { transform: rotate(38.6deg + 90deg) translate(12em); }
+.deg18 { transform: rotate(51.43deg + 90deg) translate(12em); }
+.deg19 { transform: rotate(64.29deg + 90deg) translate(12em); }
+.deg20 { transform: rotate(77.14deg + 90deg) translate(12em); }
+.deg21 { transform: rotate(90deg + 90deg) translate(12em); }
+
+
+
+// 3 CICLES WEEK 4
+
+.deg22 { transform: rotate(12.86deg + 180deg) translate(12em); }
+.deg23 { transform: rotate(25.72deg + 180deg) translate(12em); }
+.deg24 { transform: rotate(38.6deg + 180deg) translate(12em); }
+.deg25 { transform: rotate(51.43deg + 180deg) translate(12em); }
+.deg26 { transform: rotate(64.29deg + 180deg) translate(12em); }
+.deg27 { transform: rotate(77.14deg + 180deg) translate(12em); }
+.deg28 { transform: rotate(90deg + 180deg) translate(12em); }
 
 
 
