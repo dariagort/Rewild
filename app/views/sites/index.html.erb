@@ -14,7 +14,7 @@
                 <p>Start to log! You might find a pattern soon!</p>
               <% end %>
             <% end %>
-            <% @logs = @logs.reverse %>
+            <% @logs = @logs.order(date: :desc) %>
             <% @logs.take(30).each_with_index do |log, i| %>
               <% now = Date.today %>
               <% before = log.date %>
